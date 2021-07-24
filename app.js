@@ -1,11 +1,11 @@
 const replaceInput = document.querySelector("#replaceInput");
 const SearchInput = document.querySelector("#SearchInput")
 const Text = document.querySelector("#text");
+let strSearch;
+let reg;
 
 
 const finde = () => {
-    let reg;
-    let strSearch;
     let stokText = Text.innerHTML;
     if (SearchInput.value) {
         strSearch = SearchInput.value;
@@ -17,12 +17,11 @@ const finde = () => {
             setTimeout(()=>{
                 reg = new RegExp(`<mark>${strSearch}</mark>`, "gi");
                 Text.innerHTML = Text.innerHTML.replace(reg,`${strSearch}`)
-            },20000)
+            },2000)
         }
     } else {
         alert("Please enter a search term")
     }
-   
 }
 
 const replace = () => {
@@ -32,5 +31,7 @@ const replace = () => {
     } else {
         alert("Please enter a replac text")
     }
+    reg = new RegExp(`<mark>${strSearch}</mark>`, "gi");
+    console.log(reg)
     Text.innerHTML = Text.innerHTML.replace(reg, strreplace)
 }
