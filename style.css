@@ -2,7 +2,11 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to left, #D3CCE3,#E9E4F0);
     
+    
+
 }
 
 .container {
@@ -12,10 +16,10 @@ body{
     justify-content: center;
     
 }
-.input {
+.Search-control {
     display: flex;
     margin-top: 2rem;
-    border: 1px solid #ccc;
+    border: 2px solid #000;
 }
 
 
@@ -31,10 +35,21 @@ body{
 .form-input input {
     margin-left:1rem
 }
+.form-input label{
+    font-size:1.5rem;
+    font-weight:bold;
+}
+.form-input button{
+    font-weight: bold;
+}
 
 .text {
     margin-top: 2rem;
     width: 600px;
     height:600px;
     font-size: 1.5rem;
+    font-weight: bold;
+    background: linear-gradient(to left, #E9E4F0,#D3CCE3);
+    border: 1px solid #000;
+    padding: 0rem 1.5rem;
 }
